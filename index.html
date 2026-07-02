@@ -152,6 +152,12 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
 .tag:hover{transform:translateY(-3px) rotate(-1.5deg); background:var(--dot,var(--navy)); color:#fff; border-color:var(--dot,var(--navy))}
 .tag .dot{width:8px;height:8px;border-radius:50%;background:var(--dot,var(--navy))}
 .tag:hover .dot{background:#fff}
+.tag.only-sm{display:none}
+.maplink{display:inline-flex; align-items:center; gap:.4em; margin-top:.9rem; font-weight:800; font-size:.9rem; color:var(--navy); border-bottom:2px solid var(--navy-l); padding-bottom:1px; transition:border-color .2s, gap .2s}
+.maplink:hover{border-color:var(--navy); gap:.65em}
+.maplink svg{width:1.05em; height:1.05em}
+.inlink{color:inherit; text-decoration:underline; text-decoration-color:var(--orange); text-decoration-thickness:2.5px; text-underline-offset:3px; transition:text-decoration-color .2s}
+.inlink:hover{text-decoration-color:currentColor}
 .commit-panel{background:var(--navy-xd); color:#fff; border-radius:24px; padding:clamp(1.9rem,3vw,2.7rem); box-shadow:var(--shadow); position:relative; overflow:hidden}
 .commit-panel h3{font-size:clamp(1.5rem,2.6vw,2rem); margin-bottom:.7rem; line-height:1.1}
 .commit-panel p{color:rgba(255,255,255,.82); margin-bottom:1.5rem; font-weight:500}
@@ -209,6 +215,7 @@ footer .heart{color:var(--orange)}
   footer .wrap{flex-direction:column; text-align:center} footer .fright{text-align:center}
 }
 @media(max-width:520px){ .nav-cta .btn{display:none} .hero-cta .btn{width:100%; justify-content:center} .brand .logo-slot{height:34px} .brand-txt{font-size:.9rem} }
+@media(max-width:640px){ .tag.hide-sm{display:none} .tag.only-sm{display:inline-flex} }
 @media(prefers-reduced-motion:reduce){ .badge .ring-text{animation:none} .reveal{opacity:1; transform:none; transition:none} html{scroll-behavior:auto} }
 </style>
 </head>
@@ -327,7 +334,7 @@ footer .heart{color:var(--orange)}
       <div class="timeline">
         <div class="stop" style="--dot:var(--orange)">
           <time>Dès 13h30 · tout l'après-midi</time>
-          <h4>Village scout au parc Tarrerias <span class="flag">Ouvert à tous</span></h4>
+          <h4>Village scout au <a class="inlink" href="https://maps.app.goo.gl/MCs7WAGxUM7EqLqw7" target="_blank" rel="noopener">parc Tarrerias</a> <span class="flag">Ouvert à tous</span></h4>
           <p>Ateliers à visiter en famille — chants &amp; guitare, froissartage, nœuds, cuisine sur feu… Tous les Aubiérois sont les bienvenus.</p>
         </div>
         <div class="stop" style="--dot:var(--blue)">
@@ -376,6 +383,7 @@ footer .heart{color:var(--orange)}
         <div class="ic"><svg><use href="#ic-pin"/></svg></div>
         <h3>Où&nbsp;?</h3>
         <p><b>Aubière</b> — Parc Tarrerias, Carré des arts &amp; COSEC. Tout se vit à deux pas.</p>
+        <a class="maplink" href="https://maps.app.goo.gl/MCs7WAGxUM7EqLqw7" target="_blank" rel="noopener"><svg><use href="#ic-pin"/></svg> Voir le parc sur Google Maps</a>
       </div>
       <div class="card reveal" data-d="2" style="--ac:var(--turquoise)">
         <div class="ic"><svg><use href="#ic-cal"/></svg></div>
@@ -409,16 +417,17 @@ footer .heart{color:var(--orange)}
         <span class="tag" style="--dot:var(--turquoise)"><span class="dot"></span>Logistique</span>
         <span class="tag" style="--dot:var(--orange)"><span class="dot"></span>Installation (samedi matin)</span>
         <span class="tag" style="--dot:var(--red)"><span class="dot"></span>Chants &amp; guitare</span>
-        <span class="tag" style="--dot:var(--green)"><span class="dot"></span>Froissartage</span>
-        <span class="tag" style="--dot:var(--navy)"><span class="dot"></span>Nœuds</span>
-        <span class="tag" style="--dot:var(--turquoise)"><span class="dot"></span>Montage / démontage de tentes</span>
-        <span class="tag" style="--dot:var(--orange)"><span class="dot"></span>Cuisine sur feu / four solaire</span>
-        <span class="tag" style="--dot:var(--red)"><span class="dot"></span>Petits jeux scouts</span>
-        <span class="tag" style="--dot:var(--green)"><span class="dot"></span>Souvenir du WE (logo, pochoir)</span>
+        <span class="tag hide-sm" style="--dot:var(--green)"><span class="dot"></span>Froissartage</span>
+        <span class="tag hide-sm" style="--dot:var(--navy)"><span class="dot"></span>Nœuds</span>
+        <span class="tag hide-sm" style="--dot:var(--turquoise)"><span class="dot"></span>Montage / démontage de tentes</span>
+        <span class="tag hide-sm" style="--dot:var(--orange)"><span class="dot"></span>Cuisine sur feu / four solaire</span>
+        <span class="tag hide-sm" style="--dot:var(--red)"><span class="dot"></span>Petits jeux scouts</span>
+        <span class="tag hide-sm" style="--dot:var(--green)"><span class="dot"></span>Souvenir du WE (logo, pochoir)</span>
         <span class="tag" style="--dot:var(--navy)"><span class="dot"></span>Braderie de gamelles</span>
         <span class="tag" style="--dot:var(--turquoise)"><span class="dot"></span>Buvette</span>
         <span class="tag" style="--dot:var(--orange)"><span class="dot"></span>Nettoyage &amp; arbre à vœux</span>
         <span class="tag" style="--dot:var(--red)"><span class="dot"></span>Rangement</span>
+        <a class="tag only-sm" data-lien="comites" href="#" style="--dot:var(--navy)"><span class="dot"></span>+ d'autres sur l'appli →</a>
       </div>
     </div>
 
