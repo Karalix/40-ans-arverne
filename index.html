@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>40 ans du Groupe Arverne — Scouts et Guides de France · 3 & 4 octobre 2026, Aubière</title>
+<meta name="description" content="Le Groupe Arverne (Scouts et Guides de France) fête ses 40 ans les 3 & 4 octobre 2026 à Aubière : village scout, grand jeu, dîner au parc, veillée et messe. Le groupe qui déchire !" />
+
+<!-- ════════════════════════════════════════════════════════════════
+     ⚙️  À CONFIGURER — un seul endroit : la balise <script> LIENS en bas
+     Logo SGDF : assets/logo-sgdf.svg (source : Wikimedia Commons, CC BY-SA 4.0,
+     auteur « Scouts et Guides de France »). Remplaçable par le fichier du kit officiel.
+     Charte : SGDF « L'aventure par nature » — primary #003a5d, Raleway.
+     ════════════════════════════════════════════════════════════════ -->
+
+<link rel="icon" href="assets/logo-sgdf.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --navy:#003a5d; --navy-d:#002c47; --navy-xd:#04283f;
+  --navy-l:#d5e1ea; --navy-xl:#eef3f7;
+  --turquoise:#009791; --turquoise-l:#e2f2f0;
+  --blue:#0069B2; --orange:#EE7F00; --red:#C22E16; --green:#006D3E; --lightgreen:#72BA80;
+  --ink:#04202f; --ink-soft:#4a5b68;
+  --paper:#FBFAF6; --white:#fff;
+  --line:rgba(4,32,47,.12);
+  --shadow:0 22px 46px -22px rgba(0,58,93,.4);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Raleway",system-ui,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,svg{display:block}
+.wrap{width:min(1120px,92vw);margin-inline:auto}
+h1,h2,h3,h4{font-weight:900; letter-spacing:-.02em; line-height:1.02}
+
+/* ── kicker ── */
+.kicker{font-size:.76rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--navy); display:inline-flex; align-items:center; gap:.55em}
+.kicker::before{content:""; width:26px; height:3px; border-radius:3px; background:var(--orange)}
+
+/* ── buttons ── */
+.btn{display:inline-flex; align-items:center; gap:.55em; font-family:inherit; font-weight:800; font-size:1rem; padding:.9em 1.7em; border-radius:999px; cursor:pointer; border:2.5px solid transparent; transition:transform .2s ease, box-shadow .2s ease, background .2s, color .2s}
+.btn svg{width:1.1em;height:1.1em}
+.btn-primary{background:var(--navy); color:#fff; box-shadow:0 12px 24px -12px rgba(0,58,93,.9)}
+.btn-primary:hover{background:var(--navy-d); transform:translateY(-3px); box-shadow:0 18px 30px -12px rgba(0,58,93,.9)}
+.btn-ghost{background:transparent; color:var(--navy); border-color:var(--navy)}
+.btn-ghost:hover{background:var(--navy); color:#fff; transform:translateY(-3px)}
+.btn-lg{font-size:1.06rem; padding:1em 2em}
+.btn-orange{background:var(--orange); color:#fff; box-shadow:0 12px 24px -12px rgba(238,127,0,.9)}
+.btn-orange:hover{background:#d97200; transform:translateY(-3px)}
+.on-dark .btn-ghost{color:#fff; border-color:rgba(255,255,255,.65)}
+.on-dark .btn-ghost:hover{background:#fff; color:var(--navy); border-color:#fff}
+
+/* ── torn-paper edge (signature SGDF) ── */
+.band{position:relative}
+.tear{position:absolute; left:0; top:0; width:100%; height:22px; transform:translateY(-21px); z-index:2; pointer-events:none}
+.tear--navy{fill:var(--navy)}
+.tear--xl{fill:var(--navy-xl)}
+.tear--xd{fill:var(--navy-xd)}
+.tear--paper{fill:var(--paper)}
+
+/* ── header ── */
+header{position:sticky; top:0; z-index:100; background:rgba(251,250,246,.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:.6rem 0; gap:1rem}
+.brand{display:flex; align-items:center; gap:.8rem; min-width:0}
+.brand .logo-slot{height:40px; width:auto; flex:none}
+.brand-txt{font-weight:900; font-size:1.02rem; line-height:1.05; padding-left:.8rem; border-left:2px solid var(--line)}
+.brand-txt small{display:block; font-weight:700; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:var(--navy); margin-top:1px}
+.nav-links{display:flex; align-items:center; gap:1.7rem}
+.nav-links a{font-weight:700; font-size:.94rem; color:var(--ink-soft); transition:color .2s}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{display:flex; align-items:center; gap:.8rem}
+.burger{display:none; background:none; border:none; cursor:pointer; padding:.4rem}
+.burger span{display:block; width:24px; height:2.5px; border-radius:3px; background:var(--ink); margin:5px 0; transition:.3s}
+
+/* ── hero ── */
+.hero{position:relative; overflow:hidden; padding:clamp(3rem,7vw,6rem) 0 clamp(3.5rem,6vw,5.5rem)}
+.hero.photo{min-height:min(780px,90vh); display:flex; align-items:center; background:#012c46 url("hero.jpeg") center/cover no-repeat}
+.hero.photo::before{content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(90deg, rgba(0,42,68,0) 0%, rgba(0,42,68,.08) 30%, rgba(0,42,68,.66) 58%, rgba(0,45,71,.95) 100%)}
+.hero.photo .kicker{color:#fff}
+.hero.photo h1{color:#fff}
+.hero.photo h1 .hl{color:#37d0c7}
+.hero.photo .lede{color:rgba(255,255,255,.9)}
+.hero.photo .btn-primary{background:#fff; color:var(--navy); box-shadow:0 14px 30px -12px rgba(0,0,0,.55)}
+.hero.photo .btn-primary:hover{background:#eee9dd; transform:translateY(-3px)}
+.hero.photo .btn-ghost{color:#fff; border-color:rgba(255,255,255,.7)}
+.hero.photo .btn-ghost:hover{background:#fff; color:var(--navy); border-color:#fff}
+.hero-grid{display:grid; grid-template-columns:minmax(0,1fr); justify-items:end; position:relative; z-index:2}
+.hero-content{max-width:560px}
+.hero h1{font-size:clamp(2.9rem,7.4vw,5.6rem); margin:.55rem 0 0}
+.hero h1 .hl{color:var(--turquoise)}
+.hero .lede{font-size:clamp(1.06rem,1.6vw,1.28rem); color:var(--ink-soft); margin:1.4rem 0 .2rem; max-width:36ch; font-weight:500}
+.hero-meta{display:flex; flex-wrap:wrap; gap:.55rem; margin:1.7rem 0 2rem}
+.chip{display:inline-flex; align-items:center; gap:.5em; background:#fff; border:1.5px solid var(--line); border-radius:999px; padding:.5em 1em; font-size:.87rem; font-weight:700}
+.chip svg{width:1.1em;height:1.1em}
+.chip.c1 svg{color:var(--navy)} .chip.c2 svg{color:var(--orange)} .chip.c3 svg{color:var(--turquoise)}
+.hero-cta{display:flex; flex-wrap:wrap; gap:.85rem}
+
+.confetti{position:absolute; inset:0; z-index:1; pointer-events:none}
+.confetti svg{position:absolute; width:var(--s,42px); height:var(--s,42px); opacity:.15; color:var(--c,var(--navy))}
+
+.badge-wrap{display:flex; justify-content:center; position:relative}
+.badge{width:min(360px,80vw); height:auto; filter:drop-shadow(0 24px 34px rgba(0,58,93,.32))}
+.badge .ring-text{animation:spin 55s linear infinite; transform-origin:100px 100px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tagline{position:absolute; bottom:-.5rem; left:50%; transform:translateX(-50%) rotate(-2deg); background:var(--orange); color:#fff; font-weight:800; font-size:.72rem; letter-spacing:.06em; padding:.42em 1em; border-radius:4px; box-shadow:var(--shadow); white-space:nowrap}
+
+/* ── sections ── */
+section{padding:clamp(3.5rem,7vw,6rem) 0}
+.sec-head{max-width:54ch; margin-bottom:2.6rem}
+.sec-head h2{font-size:clamp(2rem,4.2vw,3.1rem); margin:.7rem 0 .5rem}
+.sec-head p{color:var(--ink-soft); font-size:1.06rem; font-weight:500}
+
+/* ── intro ── */
+.intro{background:var(--navy); color:#fff}
+.intro .wrap{display:grid; grid-template-columns:auto 1fr; gap:clamp(1.5rem,4vw,3.5rem); align-items:center}
+.intro .num{font-size:clamp(4.5rem,13vw,9rem); font-weight:900; line-height:.8; color:#fff}
+.intro p{font-size:clamp(1.15rem,2vw,1.55rem); font-weight:600; line-height:1.4}
+.intro p b{color:#fff; text-decoration:underline; text-decoration-color:var(--orange); text-decoration-thickness:3px; text-underline-offset:4px}
+
+/* ── programme ── */
+.day{margin-bottom:3rem}
+.day-tag{display:inline-flex; align-items:center; gap:.7em; font-size:1.6rem; font-weight:900; margin-bottom:.6rem}
+.day-tag span{font-size:.7rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:#fff; background:var(--navy); padding:.4em .9em; border-radius:999px}
+.timeline{position:relative; margin-left:.5rem; padding-left:2.1rem; border-left:3px dotted var(--navy-l)}
+.stop{position:relative; padding:1rem 0}
+.stop::before{content:""; position:absolute; left:calc(-2.1rem - 10px); top:1.4rem; width:18px; height:18px; border-radius:50%; background:var(--dot,var(--navy)); border:4px solid var(--paper); box-shadow:0 0 0 2px var(--dot,var(--navy))}
+.stop time{font-weight:800; color:var(--dot,var(--navy)); font-size:.92rem}
+.stop h4{font-size:1.3rem; margin:.15rem 0 .3rem}
+.stop p{color:var(--ink-soft); max-width:58ch; font-weight:500}
+.stop .flag{font-size:.62rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--orange); border:1.5px solid var(--orange); padding:.15em .55em; border-radius:999px; margin-left:.5em; vertical-align:middle; white-space:nowrap}
+
+/* ── infos ── */
+.infos{background:var(--navy-xl)}
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1.2rem}
+.card{background:#fff; border:1.5px solid var(--line); border-radius:20px; padding:1.7rem; transition:transform .25s ease, box-shadow .25s ease; border-top:5px solid var(--ac,var(--navy))}
+.card:hover{transform:translateY(-6px); box-shadow:var(--shadow)}
+.card .ic{width:48px;height:48px;border-radius:14px; display:grid; place-items:center; background:color-mix(in srgb,var(--ac,var(--navy)) 14%, #fff); color:var(--ac,var(--navy)); margin-bottom:1rem}
+.card .ic svg{width:26px;height:26px}
+.card h3{font-size:1.24rem; margin-bottom:.4rem}
+.card p{color:var(--ink-soft); font-size:.96rem; font-weight:500}
+.card p b{color:var(--ink); font-weight:800}
+
+/* ── commissions ── */
+.commit{background:var(--navy-xl)}
+.commit .wrap{display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4rem); align-items:center}
+.atelier-list{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.5rem}
+.tag{background:#fff; border:1.5px solid var(--line); border-radius:999px; padding:.5em 1em; font-size:.9rem; font-weight:700; display:inline-flex; align-items:center; gap:.5em; transition:transform .18s ease, background .18s, color .18s, border-color .18s}
+.tag:hover{transform:translateY(-3px) rotate(-1.5deg); background:var(--dot,var(--navy)); color:#fff; border-color:var(--dot,var(--navy))}
+.tag .dot{width:8px;height:8px;border-radius:50%;background:var(--dot,var(--navy))}
+.tag:hover .dot{background:#fff}
+.commit-panel{background:var(--navy-xd); color:#fff; border-radius:24px; padding:clamp(1.9rem,3vw,2.7rem); box-shadow:var(--shadow); position:relative; overflow:hidden}
+.commit-panel h3{font-size:clamp(1.5rem,2.6vw,2rem); margin-bottom:.7rem; line-height:1.1}
+.commit-panel p{color:rgba(255,255,255,.82); margin-bottom:1.5rem; font-weight:500}
+.commit-panel .hint{font-size:.82rem; font-weight:700; color:#6bc5c0; margin-top:1.1rem; display:flex; align-items:center; gap:.5em}
+.commit-panel .hint svg{width:18px;height:18px;flex:none}
+
+/* ── finale ── */
+.finale{background:var(--navy-xd); color:#fff; text-align:center}
+.finale h2{font-size:clamp(2.2rem,5vw,3.6rem); margin-bottom:1rem}
+.finale h2 .hl{color:var(--orange)}
+.finale p{color:rgba(255,255,255,.82); max-width:48ch; margin:0 auto 2rem; font-size:1.08rem; font-weight:500}
+.finale .note{font-size:.82rem; color:rgba(255,255,255,.55); margin-top:1.6rem; font-weight:600}
+
+/* ── carrousel souvenirs ── */
+.gallery{background:var(--paper)}
+.carousel{position:relative; max-width:960px; margin:0 auto}
+.slides{display:flex; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; border-radius:24px; box-shadow:var(--shadow); scrollbar-width:none}
+.slides::-webkit-scrollbar{display:none}
+.slide{position:relative; min-width:100%; scroll-snap-align:center; margin:0}
+.slide img{width:100%; height:clamp(300px,52vw,560px); object-fit:cover; display:block}
+.slide figcaption{position:absolute; left:16px; bottom:16px; padding:.34em .9em; color:#fff; font-weight:800; font-size:.92rem; letter-spacing:.06em; background:rgba(0,42,68,.68); backdrop-filter:blur(5px); border:1px solid rgba(255,255,255,.25); border-radius:999px}
+.c-btn{position:absolute; top:50%; transform:translateY(-50%); width:48px; height:48px; border-radius:50%; border:none; background:rgba(255,255,255,.9); color:var(--navy); font-size:1.7rem; line-height:1; cursor:pointer; display:grid; place-items:center; box-shadow:0 6px 16px rgba(0,0,0,.28); transition:background .2s, transform .2s; z-index:3}
+.c-btn:hover{background:#fff; transform:translateY(-50%) scale(1.08)}
+.c-btn.prev{left:14px} .c-btn.next{right:14px}
+.dots{display:flex; gap:.5rem; justify-content:center; margin-top:1.3rem}
+.dots button{width:10px; height:10px; border-radius:50%; border:none; background:var(--navy-l); cursor:pointer; padding:0; transition:background .2s, transform .2s}
+.dots button.active{background:var(--navy); transform:scale(1.3)}
+
+/* ── footer ── */
+footer{background:var(--ink); color:rgba(255,255,255,.72); padding:2.6rem 0; font-weight:500}
+footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.4rem; align-items:center; font-size:.9rem}
+footer .flogo{height:52px; width:auto; filter:brightness(0) invert(1); opacity:.95; margin-bottom:.5rem}
+footer .fbrand{color:#fff; font-weight:900; font-size:1.05rem}
+footer .fright{text-align:right}
+footer .heart{color:var(--orange)}
+
+/* ── reveal ── */
+.reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease}
+.reveal.in{opacity:1; transform:none}
+[data-d="1"]{transition-delay:.08s}[data-d="2"]{transition-delay:.16s}[data-d="3"]{transition-delay:.24s}[data-d="4"]{transition-delay:.32s}
+
+/* ── responsive ── */
+@media(max-width:860px){
+  .nav-links{position:absolute; top:100%; left:0; right:0; flex-direction:column; gap:0; background:var(--paper); border-bottom:1px solid var(--line); max-height:0; overflow:hidden; transition:max-height .35s ease}
+  .nav-links.open{max-height:320px}
+  .nav-links a{padding:1rem 6vw; width:100%; border-top:1px solid var(--line)}
+  .burger{display:block}
+  .hero-grid{grid-template-columns:1fr; justify-items:stretch}
+  .hero-content{max-width:none}
+  .hero.photo::before{background:linear-gradient(to top, rgba(0,42,68,.94) 0%, rgba(0,42,68,.78) 60%, rgba(0,42,68,.6) 100%)}
+  .badge-wrap{order:-1; margin-bottom:1rem}
+  .intro .wrap{grid-template-columns:1fr}
+  .commit .wrap{grid-template-columns:1fr}
+  .confetti{display:none}
+  footer .wrap{flex-direction:column; text-align:center} footer .fright{text-align:center}
+}
+@media(max-width:520px){ .nav-cta .btn{display:none} .hero-cta .btn{width:100%; justify-content:center} .brand .logo-slot{height:34px} .brand-txt{font-size:.9rem} }
+@media(prefers-reduced-motion:reduce){ .badge .ring-text{animation:none} .reveal{opacity:1; transform:none; transition:none} html{scroll-behavior:auto} }
+</style>
+</head>
+<body>
+
+<!-- ═══════ SPRITE PICTOGRAMMES ═══════ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="ic-tent" viewBox="0 0 24 24"><path d="M3 20 L12 5 L21 20 M3 20 H21 M9 20 L12 14 L15 20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-fire" viewBox="0 0 24 24"><path d="M12 3C11 6.5 8 8 8 12a4 4 0 008 0c0-2-1-3.2-1.6-4.2-.5 1.1-1.1 1.5-2.2 1.2C13 6.5 13 5 12 3z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-tree" viewBox="0 0 24 24"><path d="M12 3 L17 11 H14 L18 17 H6 L10 11 H7 Z M12 17 V21" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M15.5 8.5 L13 13 L8.5 15.5 L11 11 Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-mountain" viewBox="0 0 24 24"><path d="M3 20 L10 7 L14 14 L16.5 10 L21 20 Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-leaf" viewBox="0 0 24 24"><path d="M4 20C4 11 11 5 20 5c0 9-7 15-16 15z M4 20c4-5 7-7 11-9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-star" viewBox="0 0 24 24"><path d="M12 3l2.5 6.3 6.5.4-5 4.1 1.7 6.2L12 16.9 6.3 20.2 8 14 3 9.9l6.5-.4z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M16 3v4M8 3v4M3 10h18" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+  <symbol id="ic-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.3-7-11a7 7 0 0114 0c0 4.7-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.9"/></symbol>
+  <symbol id="ic-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13A4 4 0 0116 11" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M20 12v6a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<!-- torn edge path -->
+<svg width="0" height="0" style="position:absolute"><defs><path id="tearpath" d="M0,24 L0,11 L40,17 L80,7 L120,15 L160,6 L200,14 L240,8 L280,16 L320,7 L360,15 L400,9 L440,17 L480,7 L520,14 L560,6 L600,16 L640,8 L680,15 L720,6 L760,14 L800,9 L840,16 L880,7 L920,15 L960,8 L1000,16 L1040,7 L1080,14 L1120,8 L1160,15 L1200,9 L1200,24 Z"/></defs></svg>
+
+<!-- ═══════ HEADER ═══════ -->
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Groupe Arverne — Scouts et Guides de France">
+      <img class="logo-slot" src="assets/logo-sgdf.svg" alt="Scouts et Guides de France" />
+      <span class="brand-txt">Groupe Arverne<small>40 ans · Aubière</small></span>
+    </a>
+    <nav class="nav-links" id="menu">
+      <a href="#programme">Programme</a>
+      <a href="#infos">Infos pratiques</a>
+      <a href="#commissions">S'engager</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" data-lien="formulaire" href="#">S'inscrire</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════ HERO ═══════ -->
+<a id="top"></a>
+<section class="hero photo">
+  <div class="wrap hero-grid">
+    <div class="hero-content">
+      <span class="kicker reveal">Le groupe qui déchire</span>
+      <h1 class="reveal" data-d="1">40 ans,<br><span class="hl">l'aventure continue&nbsp;!</span></h1>
+      <p class="lede reveal" data-d="2">Un week-end pour se retrouver, transmettre et fêter quarante années d'aventures scoutes — autour du feu, du jeu et de nos souvenirs communs.</p>
+      <div class="hero-meta reveal" data-d="3">
+        <span class="chip c1"><svg><use href="#ic-cal"/></svg> 3 &amp; 4 octobre 2026</span>
+        <span class="chip c2"><svg><use href="#ic-pin"/></svg> Aubière · Parc Tarrerias</span>
+        <span class="chip c3"><svg><use href="#ic-tent"/></svg> Village scout ouvert à tous</span>
+      </div>
+      <div class="hero-cta reveal" data-d="4">
+        <a class="btn btn-primary btn-lg" data-lien="formulaire" href="#"><svg><use href="#ic-check"/></svg> S'inscrire au week-end</a>
+        <a class="btn btn-ghost btn-lg" data-lien="comites" href="#"><svg><use href="#ic-users"/></svg> Rejoindre une commission</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════ INTRO ═══════ -->
+<section class="intro band">
+  <svg class="tear tear--navy" viewBox="0 0 1200 24" preserveAspectRatio="none"><use href="#tearpath"/></svg>
+  <div class="wrap">
+    <div class="num">40</div>
+    <p>Quatre décennies de camps, de veillées et de belles rencontres. Le temps d'un week-end, <b>anciens, chefs, familles et Aubiérois</b> se retrouvent au parc pour fêter tout ça — et croyez-nous, <b>ça va déchirer</b>.</p>
+  </div>
+</section>
+
+<!-- ═══════ SOUVENIRS / CARROUSEL ═══════ -->
+<section class="gallery band">
+  <svg class="tear tear--paper" viewBox="0 0 1200 24" preserveAspectRatio="none"><use href="#tearpath"/></svg>
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;max-width:none;margin-inline:auto">
+      <span class="kicker" style="justify-content:center;display:flex">Souvenirs</span>
+      <h2>Quarante ans d'aventures</h2>
+    </div>
+    <div class="carousel reveal" data-carousel>
+      <div class="slides" data-track>
+        <figure class="slide"><img src="img/g7.jpg" alt="Les scouts font voler l'un des leurs devant la chapelle" loading="lazy"></figure>
+        <figure class="slide"><img src="img/g8.jpg" alt="Rassemblement du groupe au pied du Puy de Dôme" loading="lazy"></figure>
+        <figure class="slide"><img src="img/g1.jpg" alt="Pont de pierre et cascade dans les gorges, en camp d'été" loading="lazy"></figure>
+        <figure class="slide"><img src="img/g9.jpg" alt="Trois louvettes bras dessus bras dessous" loading="lazy"></figure>
+        <figure class="slide"><img src="img/g3.jpg" alt="Froissartage : une table de camp en bois et corde" loading="lazy"></figure>
+        <figure class="slide"><img src="img/g2.jpg" alt="Construction d'un radeau sur la rivière" loading="lazy"></figure>
+        <figure class="slide"><img src="img/g4.jpg" alt="Grand jeu costumé et construction en forêt" loading="lazy"></figure>
+        <figure class="slide"><img src="img/g6.jpg" alt="Repas de camp sous une tente de froissartage" loading="lazy"></figure>
+        <figure class="slide"><img src="img/g12.jpg" alt="Deux chefs en costumes romains pour le grand jeu" loading="lazy"></figure>
+        <figure class="slide"><img src="img/g5.jpg" alt="Messe célébrée au bord de la rivière" loading="lazy"></figure>
+        <figure class="slide"><img src="img/g10.jpg" alt="Les tentes canadiennes du camp au crépuscule" loading="lazy"></figure>
+        <figure class="slide"><img src="img/g11.jpg" alt="Veillée autour du feu à la tombée de la nuit" loading="lazy"></figure>
+      </div>
+      <button class="c-btn prev" aria-label="Photo précédente" type="button">‹</button>
+      <button class="c-btn next" aria-label="Photo suivante" type="button">›</button>
+      <div class="dots" data-dots></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PROGRAMME ═══════ -->
+<section id="programme">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Le fil du week-end</span>
+      <h2>Programme</h2>
+      <p>Deux jours pour tous les âges, du village d'ateliers au feu de veillée, jusqu'à la messe et le pique-nique du dimanche.</p>
+    </div>
+
+    <div class="day reveal">
+      <div class="day-tag"><span>Samedi</span> 3 octobre</div>
+      <div class="timeline">
+        <div class="stop" style="--dot:var(--orange)">
+          <time>Dès 13h30 · tout l'après-midi</time>
+          <h4>Village scout au parc Tarrerias <span class="flag">Ouvert à tous</span></h4>
+          <p>Ateliers à visiter en famille — chants &amp; guitare, froissartage, nœuds, cuisine sur feu… Tous les Aubiérois sont les bienvenus.</p>
+        </div>
+        <div class="stop" style="--dot:var(--blue)">
+          <time>14h30 – 17h30</time>
+          <h4>Grand jeu dans Aubière</h4>
+          <p>Une aventure grandeur nature à travers la ville, pour les jeunes et les chefs.</p>
+        </div>
+        <div class="stop" style="--dot:var(--red)">
+          <time>18h30</time>
+          <h4>Apéro scout &amp; dîner au parc</h4>
+          <p>On se pose autour d'un verre puis d'un repas partagé sous les arbres. <b>Inscription au repas demandée</b> — on compte les présents &amp; les allergies.</p>
+        </div>
+        <div class="stop" style="--dot:var(--green)">
+          <time>21h00</time>
+          <h4>Veillée</h4>
+          <p>Chants, sketches et flammes qui dansent : le grand classique, en plus grand.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="day reveal">
+      <div class="day-tag"><span>Dimanche</span> 4 octobre</div>
+      <div class="timeline">
+        <div class="stop" style="--dot:var(--turquoise)">
+          <time>10h00</time>
+          <h4>Messe à Pérignat-lès-Sarliève</h4>
+          <p>Célébration à la salle l'Affiche, pour rendre grâce de ces quarante années.</p>
+        </div>
+        <div class="stop" style="--dot:var(--orange)">
+          <time>12h00</time>
+          <h4>Pique-nique partagé</h4>
+          <p>Chacun apporte, tout le monde partage : le meilleur moyen de prolonger le week-end.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ INFOS PRATIQUES ═══════ -->
+<section id="infos" class="infos band">
+  <svg class="tear tear--xl" viewBox="0 0 1200 24" preserveAspectRatio="none"><use href="#tearpath"/></svg>
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Bon à savoir</span><h2>Infos pratiques</h2></div>
+    <div class="cards">
+      <div class="card reveal" data-d="1" style="--ac:var(--navy)">
+        <div class="ic"><svg><use href="#ic-pin"/></svg></div>
+        <h3>Où&nbsp;?</h3>
+        <p><b>Aubière</b> — Parc Tarrerias, Carré des arts &amp; COSEC. Tout se vit à deux pas.</p>
+      </div>
+      <div class="card reveal" data-d="2" style="--ac:var(--turquoise)">
+        <div class="ic"><svg><use href="#ic-cal"/></svg></div>
+        <h3>Quand&nbsp;?</h3>
+        <p><b>Samedi 3 octobre</b> dès 13h30 et <b>dimanche 4 octobre</b> (messe &amp; pique-nique) 2026.</p>
+      </div>
+      <div class="card reveal" data-d="3" style="--ac:var(--orange)">
+        <div class="ic"><svg><use href="#ic-tent"/></svg></div>
+        <h3>Le village scout</h3>
+        <p>Ateliers <b>ouverts à tous les Aubiérois</b> l'après-midi : venez curieux, repartez conquis.</p>
+      </div>
+      <div class="card reveal" data-d="4" style="--ac:var(--green)">
+        <div class="ic"><svg><use href="#ic-fire"/></svg></div>
+        <h3>Dîner &amp; allergies</h3>
+        <p>Le repas du soir est <b>gratuit</b> — mais on a besoin du nombre de convives et des allergies via le formulaire.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ COMMISSIONS ═══════ -->
+<section id="commissions" class="commit band">
+  <svg class="tear tear--xl" viewBox="0 0 1200 24" preserveAspectRatio="none"><use href="#tearpath"/></svg>
+  <div class="wrap">
+    <div>
+      <span class="kicker reveal">Donner un coup de main</span>
+      <h2 class="reveal" data-d="1" style="font-size:clamp(2rem,4.2vw,3.1rem);margin:.7rem 0 .6rem">Un week-end réussi, c'est plein de bonnes volontés</h2>
+      <p class="reveal" data-d="2" style="color:var(--ink-soft);max-width:46ch;font-weight:500">Choisis la ou les commissions où tu veux <b>aider à organiser</b> — pas seulement participer. Sur l'appli, tu vois qui s'est déjà inscrit : rejoins tes copains&nbsp;!</p>
+      <div class="atelier-list reveal" data-d="3">
+        <span class="tag" style="--dot:var(--navy)"><span class="dot"></span>Intendance</span>
+        <span class="tag" style="--dot:var(--turquoise)"><span class="dot"></span>Logistique</span>
+        <span class="tag" style="--dot:var(--orange)"><span class="dot"></span>Installation (samedi matin)</span>
+        <span class="tag" style="--dot:var(--red)"><span class="dot"></span>Chants &amp; guitare</span>
+        <span class="tag" style="--dot:var(--green)"><span class="dot"></span>Froissartage</span>
+        <span class="tag" style="--dot:var(--navy)"><span class="dot"></span>Nœuds</span>
+        <span class="tag" style="--dot:var(--turquoise)"><span class="dot"></span>Montage / démontage de tentes</span>
+        <span class="tag" style="--dot:var(--orange)"><span class="dot"></span>Cuisine sur feu / four solaire</span>
+        <span class="tag" style="--dot:var(--red)"><span class="dot"></span>Petits jeux scouts</span>
+        <span class="tag" style="--dot:var(--green)"><span class="dot"></span>Souvenir du WE (logo, pochoir)</span>
+        <span class="tag" style="--dot:var(--navy)"><span class="dot"></span>Braderie de gamelles</span>
+        <span class="tag" style="--dot:var(--turquoise)"><span class="dot"></span>Buvette</span>
+        <span class="tag" style="--dot:var(--orange)"><span class="dot"></span>Nettoyage &amp; arbre à vœux</span>
+        <span class="tag" style="--dot:var(--red)"><span class="dot"></span>Rangement</span>
+      </div>
+    </div>
+
+    <div class="commit-panel reveal" data-d="2">
+      <h3>Rejoins une commission</h3>
+      <p>L'inscription aux commissions se fait sur notre appli dédiée : choisis tes ateliers et vois en temps réel qui t'y rejoint.</p>
+      <a class="btn btn-orange" data-lien="comites" href="#">Ouvrir l'appli des commissions <svg><use href="#ic-arrow"/></svg></a>
+      <div class="hint"><svg><use href="#ic-star"/></svg> Astuce : inscris-toi d'abord au week-end, puis choisis ta commission.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FINALE ═══════ -->
+<section class="finale band on-dark">
+  <svg class="tear tear--xd" viewBox="0 0 1200 24" preserveAspectRatio="none"><use href="#tearpath"/></svg>
+  <div class="wrap">
+    <span class="kicker reveal" style="color:#fff;justify-content:center;display:flex">On compte sur toi</span>
+    <h2 class="reveal" data-d="1">Prêt·e à fêter <span class="hl">les 40 ans</span>&nbsp;?</h2>
+    <p class="reveal" data-d="2">Deux minutes pour t'inscrire, dire si tu viens en famille et si tu restes au dîner. Rendez-vous au parc&nbsp;!</p>
+    <div class="reveal" data-d="3" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-orange btn-lg" data-lien="formulaire" href="#"><svg><use href="#ic-check"/></svg> S'inscrire au week-end</a>
+      <a class="btn btn-ghost btn-lg" data-lien="comites" href="#">Rejoindre une commission</a>
+    </div>
+    <p class="note reveal" data-d="4">Nom · Année d'appartenance · Famille · Repas &amp; allergies — c'est tout.</p>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+  <div class="wrap">
+    <div>
+      <img class="flogo" src="assets/logo-sgdf.svg" alt="Scouts et Guides de France" />
+      <div class="fbrand">Groupe Arverne · Le groupe qui déchire</div>
+    </div>
+    <div class="fright">Aubière · 3 &amp; 4 octobre 2026<br>Pour toute information : <a href="mailto:rg.arverne@gmail.com" style="color:#fff;text-decoration:underline;text-underline-offset:3px">rg.arverne@gmail.com</a></div>
+  </div>
+</footer>
+
+<script>
+/* ════════════════════════════════════════════════════════════════
+   ⚙️  SEUL ENDROIT À MODIFIER — colle ici tes deux liens :
+   ════════════════════════════════════════════════════════════════ */
+const LIENS = {
+  formulaire : "https://tally.so/r/LZgegp",                    // formulaire d'inscription Tally
+  comites    : "https://comeety.krlx.fr/e/bmuemtu"            // appli Comeety de gestion des commissions
+};
+/* ════════════════════════════════════════════════════════════════ */
+
+document.querySelectorAll("[data-lien]").forEach(a=>{
+  const url = LIENS[a.dataset.lien];
+  if(url && !url.startsWith("REMPLACER")){ a.href = url; a.target="_blank"; a.rel="noopener"; }
+});
+
+const burger = document.getElementById("burger"), menu = document.getElementById("menu");
+burger.addEventListener("click", ()=>{ const o = menu.classList.toggle("open"); burger.setAttribute("aria-expanded", o); });
+menu.querySelectorAll("a").forEach(l=>l.addEventListener("click",()=>menu.classList.remove("open")));
+
+const io = new IntersectionObserver((es)=>{ es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }); },{threshold:.12, rootMargin:"0px 0px -8% 0px"});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+// carrousel souvenirs
+document.querySelectorAll("[data-carousel]").forEach(c=>{
+  const track = c.querySelector("[data-track]"), slides = [...track.children], dots = c.querySelector("[data-dots]");
+  slides.forEach((_,i)=>{ const b=document.createElement("button"); if(i===0)b.className="active"; b.setAttribute("aria-label","Aller à la photo "+(i+1)); b.addEventListener("click",()=>track.scrollTo({left:track.clientWidth*i,behavior:"smooth"})); dots.appendChild(b); });
+  const idx = ()=>Math.round(track.scrollLeft/track.clientWidth);
+  const go = d=>{ const n=(idx()+d+slides.length)%slides.length; track.scrollTo({left:track.clientWidth*n,behavior:"smooth"}); };
+  c.querySelector(".prev").addEventListener("click",()=>go(-1));
+  c.querySelector(".next").addEventListener("click",()=>go(1));
+  track.addEventListener("scroll",()=>requestAnimationFrame(()=>{ const i=idx(); [...dots.children].forEach((d,j)=>d.classList.toggle("active",j===i)); }));
+  if(!window.matchMedia("(prefers-reduced-motion:reduce)").matches){
+    let t=setInterval(()=>go(1),5000);
+    c.addEventListener("mouseenter",()=>clearInterval(t));
+    c.addEventListener("mouseleave",()=>{ t=setInterval(()=>go(1),5000); });
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Originaux lourds des photos — non utilisés par la page.
+# La page charge uniquement les versions optimisées de img/.
+carousel/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
