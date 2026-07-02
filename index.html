@@ -97,6 +97,8 @@ header{position:sticky; top:0; z-index:100; background:rgba(251,250,246,.9); bac
 .chip{display:inline-flex; align-items:center; gap:.5em; background:#fff; border:1.5px solid var(--line); border-radius:999px; padding:.5em 1em; font-size:.87rem; font-weight:700}
 .chip svg{width:1.1em;height:1.1em}
 .chip.c1 svg{color:var(--navy)} .chip.c2 svg{color:var(--orange)} .chip.c3 svg{color:var(--turquoise)}
+a.chip{transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease}
+a.chip:hover{transform:translateY(-2px); border-color:var(--navy); box-shadow:0 8px 16px -10px rgba(0,58,93,.55)}
 .hero-cta{display:flex; flex-wrap:wrap; gap:.85rem}
 
 .confetti{position:absolute; inset:0; z-index:1; pointer-events:none}
@@ -269,7 +271,7 @@ footer .heart{color:var(--orange)}
       <p class="lede reveal" data-d="2">Un week-end pour se retrouver, transmettre et fêter quarante années d'aventures scoutes — autour du feu, du jeu et de nos souvenirs communs.</p>
       <div class="hero-meta reveal" data-d="3">
         <span class="chip c1"><svg><use href="#ic-cal"/></svg> 3 &amp; 4 octobre 2026</span>
-        <span class="chip c2"><svg><use href="#ic-pin"/></svg> Aubière · Parc Tarrerias</span>
+        <a class="chip c2" href="https://maps.app.goo.gl/MCs7WAGxUM7EqLqw7" target="_blank" rel="noopener"><svg><use href="#ic-pin"/></svg> Aubière · Parc Tarrerias</a>
         <span class="chip c3"><svg><use href="#ic-tent"/></svg> Village scout ouvert à tous</span>
       </div>
       <div class="hero-cta reveal" data-d="4">
