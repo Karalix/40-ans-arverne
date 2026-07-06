@@ -6,11 +6,27 @@
 <title>40 ans du Groupe Arverne — Scouts et Guides de France · 3 & 4 octobre 2026, Aubière</title>
 <meta name="description" content="Le Groupe Arverne (Scouts et Guides de France) fête ses 40 ans les 3 & 4 octobre 2026 à Aubière : village scout, grand jeu, dîner au parc, veillée et messe. Le groupe qui déchire !" />
 
+<!-- Aperçu de partage (WhatsApp, réseaux, iMessage…) = l'affiche de la fête -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="40 ans du Groupe Arverne" />
+<meta property="og:title" content="40 ans du Groupe Arverne — 3 & 4 octobre 2026, Aubière" />
+<meta property="og:description" content="Le Groupe Arverne fête ses 40 ans les 3 & 4 octobre 2026 à Aubière. Village scout, grand jeu, dîner au parc, veillée et messe : venez, ça va déchirer !" />
+<meta property="og:image" content="https://sgdfarverne.fr/poster.jpeg" />
+<meta property="og:image:width" content="1131" />
+<meta property="og:image:height" content="1600" />
+<meta property="og:image:alt" content="Affiche des 40 ans du Groupe Arverne — samedi 3 octobre 2026, parc Tarrerias à Aubière" />
+<meta property="og:url" content="https://sgdfarverne.fr/" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="40 ans du Groupe Arverne — 3 & 4 octobre 2026, Aubière" />
+<meta name="twitter:description" content="Le Groupe Arverne fête ses 40 ans à Aubière. Village scout, grand jeu, veillée : venez, ça va déchirer !" />
+<meta name="twitter:image" content="https://sgdfarverne.fr/poster.jpeg" />
+
 <!-- ════════════════════════════════════════════════════════════════
      ⚙️  À CONFIGURER — un seul endroit : la balise <script> LIENS en bas
      Logo SGDF : assets/logo-sgdf.svg (source : Wikimedia Commons, CC BY-SA 4.0,
      auteur « Scouts et Guides de France »). Remplaçable par le fichier du kit officiel.
-     Charte : SGDF « L'aventure par nature » — primary #003a5d, Raleway.
+     Charte : SGDF « L'aventure par nature » — primary #015F51 (vert de l’affiche), Raleway.
      ════════════════════════════════════════════════════════════════ -->
 
 <link rel="icon" href="assets/logo-sgdf.svg" type="image/svg+xml" />
@@ -20,14 +36,17 @@
 
 <style>
 :root{
-  --navy:#003a5d; --navy-d:#002c47; --navy-xd:#04283f;
-  --navy-l:#d5e1ea; --navy-xl:#eef3f7;
+  /* Couleur principale = vert de l'affiche (poster.jpeg), extrait #015F51 */
+  --primary:#015F51; --primary-d:#014C41; --primary-xd:#013A31;
+  --primary-l:#cfe6df; --primary-xl:#eaf5f1;
+  --forest:#01231d; /* vert forêt très sombre — fond du footer */
+  --marine:#003a5d; --marine-d:#002c47; /* ancien bleu marine, gardé en secondaire */
   --turquoise:#009791; --turquoise-l:#e2f2f0;
   --blue:#0069B2; --orange:#EE7F00; --red:#C22E16; --green:#006D3E; --lightgreen:#72BA80;
   --ink:#04202f; --ink-soft:#4a5b68;
   --paper:#FBFAF6; --white:#fff;
   --line:rgba(4,32,47,.12);
-  --shadow:0 22px 46px -22px rgba(0,58,93,.4);
+  --shadow:0 22px 46px -22px rgba(1,60,50,.4);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -38,28 +57,28 @@ img,svg{display:block}
 h1,h2,h3,h4{font-weight:900; letter-spacing:-.02em; line-height:1.02}
 
 /* ── kicker ── */
-.kicker{font-size:.76rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--navy); display:inline-flex; align-items:center; gap:.55em}
+.kicker{font-size:.76rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--primary); display:inline-flex; align-items:center; gap:.55em}
 .kicker::before{content:""; width:26px; height:3px; border-radius:3px; background:var(--orange)}
 
 /* ── buttons ── */
 .btn{display:inline-flex; align-items:center; gap:.55em; font-family:inherit; font-weight:800; font-size:1rem; padding:.9em 1.7em; border-radius:999px; cursor:pointer; border:2.5px solid transparent; transition:transform .2s ease, box-shadow .2s ease, background .2s, color .2s}
 .btn svg{width:1.1em;height:1.1em}
-.btn-primary{background:var(--navy); color:#fff; box-shadow:0 12px 24px -12px rgba(0,58,93,.9)}
-.btn-primary:hover{background:var(--navy-d); transform:translateY(-3px); box-shadow:0 18px 30px -12px rgba(0,58,93,.9)}
-.btn-ghost{background:transparent; color:var(--navy); border-color:var(--navy)}
-.btn-ghost:hover{background:var(--navy); color:#fff; transform:translateY(-3px)}
+.btn-primary{background:var(--primary); color:#fff; box-shadow:0 12px 24px -12px rgba(1,60,50,.9)}
+.btn-primary:hover{background:var(--primary-d); transform:translateY(-3px); box-shadow:0 18px 30px -12px rgba(1,60,50,.9)}
+.btn-ghost{background:transparent; color:var(--primary); border-color:var(--primary)}
+.btn-ghost:hover{background:var(--primary); color:#fff; transform:translateY(-3px)}
 .btn-lg{font-size:1.06rem; padding:1em 2em}
 .btn-orange{background:var(--orange); color:#fff; box-shadow:0 12px 24px -12px rgba(238,127,0,.9)}
 .btn-orange:hover{background:#d97200; transform:translateY(-3px)}
 .on-dark .btn-ghost{color:#fff; border-color:rgba(255,255,255,.65)}
-.on-dark .btn-ghost:hover{background:#fff; color:var(--navy); border-color:#fff}
+.on-dark .btn-ghost:hover{background:#fff; color:var(--primary); border-color:#fff}
 
 /* ── torn-paper edge (signature SGDF) ── */
 .band{position:relative}
 .tear{position:absolute; left:0; top:0; width:100%; height:22px; transform:translateY(-21px); z-index:2; pointer-events:none}
-.tear--navy{fill:var(--navy)}
-.tear--xl{fill:var(--navy-xl)}
-.tear--xd{fill:var(--navy-xd)}
+.tear--primary{fill:var(--primary)}
+.tear--xl{fill:var(--primary-xl)}
+.tear--xd{fill:var(--primary-xd)}
 .tear--paper{fill:var(--paper)}
 
 /* ── header ── */
@@ -68,26 +87,26 @@ header{position:sticky; top:0; z-index:100; background:rgba(251,250,246,.9); bac
 .brand{display:flex; align-items:center; gap:.8rem; min-width:0}
 .brand .logo-slot{height:40px; width:auto; flex:none}
 .brand-txt{font-weight:900; font-size:1.02rem; line-height:1.05; padding-left:.8rem; border-left:2px solid var(--line)}
-.brand-txt small{display:block; font-weight:700; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:var(--navy); margin-top:1px}
+.brand-txt small{display:block; font-weight:700; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:var(--primary); margin-top:1px}
 .nav-links{display:flex; align-items:center; gap:1.7rem}
 .nav-links a{font-weight:700; font-size:.94rem; color:var(--ink-soft); transition:color .2s}
-.nav-links a:hover{color:var(--navy)}
+.nav-links a:hover{color:var(--primary)}
 .nav-cta{display:flex; align-items:center; gap:.8rem}
 .burger{display:none; background:none; border:none; cursor:pointer; padding:.4rem}
 .burger span{display:block; width:24px; height:2.5px; border-radius:3px; background:var(--ink); margin:5px 0; transition:.3s}
 
 /* ── hero ── */
 .hero{position:relative; overflow:hidden; padding:clamp(3rem,7vw,6rem) 0 clamp(3.5rem,6vw,5.5rem)}
-.hero.photo{min-height:min(780px,90vh); display:flex; align-items:center; background:#012c46 url("hero.jpeg") center/cover no-repeat}
-.hero.photo::before{content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(90deg, rgba(0,42,68,0) 0%, rgba(0,42,68,.08) 30%, rgba(0,42,68,.66) 58%, rgba(0,45,71,.95) 100%)}
+.hero.photo{min-height:min(780px,90vh); display:flex; align-items:center; background:#012a22 url("hero.jpeg") center/cover no-repeat}
+.hero.photo::before{content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(90deg, rgba(1,45,38,0) 0%, rgba(1,45,38,.08) 30%, rgba(1,45,38,.66) 58%, rgba(1,50,42,.95) 100%)}
 .hero.photo .kicker{color:#fff}
 .hero.photo h1{color:#fff}
 .hero.photo h1 .hl{color:#37d0c7}
 .hero.photo .lede{color:rgba(255,255,255,.9)}
-.hero.photo .btn-primary{background:#fff; color:var(--navy); box-shadow:0 14px 30px -12px rgba(0,0,0,.55)}
+.hero.photo .btn-primary{background:#fff; color:var(--primary); box-shadow:0 14px 30px -12px rgba(0,0,0,.55)}
 .hero.photo .btn-primary:hover{background:#eee9dd; transform:translateY(-3px)}
 .hero.photo .btn-ghost{color:#fff; border-color:rgba(255,255,255,.7)}
-.hero.photo .btn-ghost:hover{background:#fff; color:var(--navy); border-color:#fff}
+.hero.photo .btn-ghost:hover{background:#fff; color:var(--primary); border-color:#fff}
 .hero-grid{display:grid; grid-template-columns:minmax(0,1fr); justify-items:end; position:relative; z-index:2}
 .hero-content{max-width:560px}
 .hero h1{font-size:clamp(2.9rem,7.4vw,5.6rem); margin:.55rem 0 0}
@@ -96,16 +115,16 @@ header{position:sticky; top:0; z-index:100; background:rgba(251,250,246,.9); bac
 .hero-meta{display:flex; flex-wrap:wrap; gap:.55rem; margin:1.7rem 0 2rem}
 .chip{display:inline-flex; align-items:center; gap:.5em; background:#fff; border:1.5px solid var(--line); border-radius:999px; padding:.5em 1em; font-size:.87rem; font-weight:700}
 .chip svg{width:1.1em;height:1.1em}
-.chip.c1 svg{color:var(--navy)} .chip.c2 svg{color:var(--orange)} .chip.c3 svg{color:var(--turquoise)}
+.chip.c1 svg{color:var(--primary)} .chip.c2 svg{color:var(--orange)} .chip.c3 svg{color:var(--turquoise)}
 a.chip{transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease}
-a.chip:hover{transform:translateY(-2px); border-color:var(--navy); box-shadow:0 8px 16px -10px rgba(0,58,93,.55)}
+a.chip:hover{transform:translateY(-2px); border-color:var(--primary); box-shadow:0 8px 16px -10px rgba(1,60,50,.55)}
 .hero-cta{display:flex; flex-wrap:wrap; gap:.85rem}
 
 .confetti{position:absolute; inset:0; z-index:1; pointer-events:none}
-.confetti svg{position:absolute; width:var(--s,42px); height:var(--s,42px); opacity:.15; color:var(--c,var(--navy))}
+.confetti svg{position:absolute; width:var(--s,42px); height:var(--s,42px); opacity:.15; color:var(--c,var(--primary))}
 
 .badge-wrap{display:flex; justify-content:center; position:relative}
-.badge{width:min(360px,80vw); height:auto; filter:drop-shadow(0 24px 34px rgba(0,58,93,.32))}
+.badge{width:min(360px,80vw); height:auto; filter:drop-shadow(0 24px 34px rgba(1,60,50,.32))}
 .badge .ring-text{animation:spin 55s linear infinite; transform-origin:100px 100px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .tagline{position:absolute; bottom:-.5rem; left:50%; transform:translateX(-50%) rotate(-2deg); background:var(--orange); color:#fff; font-weight:800; font-size:.72rem; letter-spacing:.06em; padding:.42em 1em; border-radius:4px; box-shadow:var(--shadow); white-space:nowrap}
@@ -117,7 +136,7 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
 .sec-head p{color:var(--ink-soft); font-size:1.06rem; font-weight:500}
 
 /* ── intro ── */
-.intro{background:var(--navy); color:#fff}
+.intro{background:var(--primary); color:#fff}
 .intro .wrap{display:grid; grid-template-columns:auto 1fr; gap:clamp(1.5rem,4vw,3.5rem); align-items:center}
 .intro .num{font-size:clamp(4.5rem,13vw,9rem); font-weight:900; line-height:.8; color:#fff}
 .intro p{font-size:clamp(1.15rem,2vw,1.55rem); font-weight:600; line-height:1.4}
@@ -126,48 +145,48 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
 /* ── programme ── */
 .day{margin-bottom:3rem}
 .day-tag{display:inline-flex; align-items:center; gap:.7em; font-size:1.6rem; font-weight:900; margin-bottom:.6rem}
-.day-tag span{font-size:.7rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:#fff; background:var(--navy); padding:.4em .9em; border-radius:999px}
-.timeline{position:relative; margin-left:.5rem; padding-left:2.1rem; border-left:3px dotted var(--navy-l)}
+.day-tag span{font-size:.7rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:#fff; background:var(--primary); padding:.4em .9em; border-radius:999px}
+.timeline{position:relative; margin-left:.5rem; padding-left:2.1rem; border-left:3px dotted var(--primary-l)}
 .stop{position:relative; padding:1rem 0}
-.stop::before{content:""; position:absolute; left:calc(-2.1rem - 10px); top:1.4rem; width:18px; height:18px; border-radius:50%; background:var(--dot,var(--navy)); border:4px solid var(--paper); box-shadow:0 0 0 2px var(--dot,var(--navy))}
-.stop time{font-weight:800; color:var(--dot,var(--navy)); font-size:.92rem}
+.stop::before{content:""; position:absolute; left:calc(-2.1rem - 10px); top:1.4rem; width:18px; height:18px; border-radius:50%; background:var(--dot,var(--primary)); border:4px solid var(--paper); box-shadow:0 0 0 2px var(--dot,var(--primary))}
+.stop time{font-weight:800; color:var(--dot,var(--primary)); font-size:.92rem}
 .stop h4{font-size:1.3rem; margin:.15rem 0 .3rem}
 .stop p{color:var(--ink-soft); max-width:58ch; font-weight:500}
 .stop .flag{font-size:.62rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--orange); border:1.5px solid var(--orange); padding:.15em .55em; border-radius:999px; margin-left:.5em; vertical-align:middle; white-space:nowrap}
 
 /* ── infos ── */
-.infos{background:var(--navy-xl)}
+.infos{background:var(--primary-xl)}
 .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1.2rem}
-.card{background:#fff; border:1.5px solid var(--line); border-radius:20px; padding:1.7rem; transition:transform .25s ease, box-shadow .25s ease; border-top:5px solid var(--ac,var(--navy))}
+.card{background:#fff; border:1.5px solid var(--line); border-radius:20px; padding:1.7rem; transition:transform .25s ease, box-shadow .25s ease; border-top:5px solid var(--ac,var(--primary))}
 .card:hover{transform:translateY(-6px); box-shadow:var(--shadow)}
-.card .ic{width:48px;height:48px;border-radius:14px; display:grid; place-items:center; background:color-mix(in srgb,var(--ac,var(--navy)) 14%, #fff); color:var(--ac,var(--navy)); margin-bottom:1rem}
+.card .ic{width:48px;height:48px;border-radius:14px; display:grid; place-items:center; background:color-mix(in srgb,var(--ac,var(--primary)) 14%, #fff); color:var(--ac,var(--primary)); margin-bottom:1rem}
 .card .ic svg{width:26px;height:26px}
 .card h3{font-size:1.24rem; margin-bottom:.4rem}
 .card p{color:var(--ink-soft); font-size:.96rem; font-weight:500}
 .card p b{color:var(--ink); font-weight:800}
 
 /* ── commissions ── */
-.commit{background:var(--navy-xl)}
+.commit{background:var(--primary-xl)}
 .commit .wrap{display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4rem); align-items:center}
 .atelier-list{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.5rem}
 .tag{background:#fff; border:1.5px solid var(--line); border-radius:999px; padding:.5em 1em; font-size:.9rem; font-weight:700; display:inline-flex; align-items:center; gap:.5em; transition:transform .18s ease, background .18s, color .18s, border-color .18s}
-.tag:hover{transform:translateY(-3px) rotate(-1.5deg); background:var(--dot,var(--navy)); color:#fff; border-color:var(--dot,var(--navy))}
-.tag .dot{width:8px;height:8px;border-radius:50%;background:var(--dot,var(--navy))}
+.tag:hover{transform:translateY(-3px) rotate(-1.5deg); background:var(--dot,var(--primary)); color:#fff; border-color:var(--dot,var(--primary))}
+.tag .dot{width:8px;height:8px;border-radius:50%;background:var(--dot,var(--primary))}
 .tag:hover .dot{background:#fff}
 .tag.only-sm{display:none}
-.maplink{display:inline-flex; align-items:center; gap:.4em; margin-top:.9rem; font-weight:800; font-size:.9rem; color:var(--navy); border-bottom:2px solid var(--navy-l); padding-bottom:1px; transition:border-color .2s, gap .2s}
-.maplink:hover{border-color:var(--navy); gap:.65em}
+.maplink{display:inline-flex; align-items:center; gap:.4em; margin-top:.9rem; font-weight:800; font-size:.9rem; color:var(--primary); border-bottom:2px solid var(--primary-l); padding-bottom:1px; transition:border-color .2s, gap .2s}
+.maplink:hover{border-color:var(--primary); gap:.65em}
 .maplink svg{width:1.05em; height:1.05em}
 .inlink{color:inherit; text-decoration:underline; text-decoration-color:var(--orange); text-decoration-thickness:2.5px; text-underline-offset:3px; transition:text-decoration-color .2s}
 .inlink:hover{text-decoration-color:currentColor}
-.commit-panel{background:var(--navy-xd); color:#fff; border-radius:24px; padding:clamp(1.9rem,3vw,2.7rem); box-shadow:var(--shadow); position:relative; overflow:hidden}
+.commit-panel{background:var(--primary-xd); color:#fff; border-radius:24px; padding:clamp(1.9rem,3vw,2.7rem); box-shadow:var(--shadow); position:relative; overflow:hidden}
 .commit-panel h3{font-size:clamp(1.5rem,2.6vw,2rem); margin-bottom:.7rem; line-height:1.1}
 .commit-panel p{color:rgba(255,255,255,.82); margin-bottom:1.5rem; font-weight:500}
 .commit-panel .hint{font-size:.82rem; font-weight:700; color:#6bc5c0; margin-top:1.1rem; display:flex; align-items:center; gap:.5em}
 .commit-panel .hint svg{width:18px;height:18px;flex:none}
 
 /* ── finale ── */
-.finale{background:var(--navy-xd); color:#fff; text-align:center}
+.finale{background:var(--primary-xd); color:#fff; text-align:center}
 .finale h2{font-size:clamp(2.2rem,5vw,3.6rem); margin-bottom:1rem}
 .finale h2 .hl{color:var(--orange)}
 .finale p{color:rgba(255,255,255,.82); max-width:48ch; margin:0 auto 2rem; font-size:1.08rem; font-weight:500}
@@ -180,16 +199,32 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
 .slides::-webkit-scrollbar{display:none}
 .slide{position:relative; min-width:100%; scroll-snap-align:center; margin:0}
 .slide img{width:100%; height:clamp(300px,52vw,560px); object-fit:cover; display:block}
-.slide figcaption{position:absolute; left:16px; bottom:16px; padding:.34em .9em; color:#fff; font-weight:800; font-size:.92rem; letter-spacing:.06em; background:rgba(0,42,68,.68); backdrop-filter:blur(5px); border:1px solid rgba(255,255,255,.25); border-radius:999px}
-.c-btn{position:absolute; top:50%; transform:translateY(-50%); width:48px; height:48px; border-radius:50%; border:none; background:rgba(255,255,255,.9); color:var(--navy); font-size:1.7rem; line-height:1; cursor:pointer; display:grid; place-items:center; box-shadow:0 6px 16px rgba(0,0,0,.28); transition:background .2s, transform .2s; z-index:3}
+.slide figcaption{position:absolute; left:16px; bottom:16px; padding:.34em .9em; color:#fff; font-weight:800; font-size:.92rem; letter-spacing:.06em; background:rgba(1,45,38,.68); backdrop-filter:blur(5px); border:1px solid rgba(255,255,255,.25); border-radius:999px}
+.c-btn{position:absolute; top:50%; transform:translateY(-50%); width:48px; height:48px; border-radius:50%; border:none; background:rgba(255,255,255,.9); color:var(--primary); font-size:1.7rem; line-height:1; cursor:pointer; display:grid; place-items:center; box-shadow:0 6px 16px rgba(0,0,0,.28); transition:background .2s, transform .2s; z-index:3}
 .c-btn:hover{background:#fff; transform:translateY(-50%) scale(1.08)}
 .c-btn.prev{left:14px} .c-btn.next{right:14px}
 .dots{display:flex; gap:.5rem; justify-content:center; margin-top:1.3rem}
-.dots button{width:10px; height:10px; border-radius:50%; border:none; background:var(--navy-l); cursor:pointer; padding:0; transition:background .2s, transform .2s}
-.dots button.active{background:var(--navy); transform:scale(1.3)}
+.dots button{width:10px; height:10px; border-radius:50%; border:none; background:var(--primary-l); cursor:pointer; padding:0; transition:background .2s, transform .2s}
+.dots button.active{background:var(--primary); transform:scale(1.3)}
+
+/* ── l'affiche ── */
+.affiche{background:var(--primary-xd); color:#fff}
+.affiche .wrap{display:grid; grid-template-columns:auto 1fr; gap:clamp(2rem,5vw,4.5rem); align-items:center}
+.affiche-frame{justify-self:center; background:#fff; padding:clamp(9px,1.3vw,15px); border-radius:8px; box-shadow:0 34px 66px -26px rgba(0,0,0,.7); transform:rotate(-1.6deg); transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.affiche-frame:hover{transform:rotate(0) translateY(-4px)}
+.affiche-frame img{width:min(340px,74vw); height:auto; border-radius:2px; display:block}
+.affiche-txt{max-width:46ch}
+.affiche-txt .kicker{color:#fff}
+.affiche-txt .kicker::before{background:var(--turquoise)}
+.affiche-txt h2{font-size:clamp(2rem,4.2vw,3.1rem); color:#fff; margin:.7rem 0 .8rem}
+.affiche-txt h2 .hl{color:var(--orange)}
+.affiche-txt p{color:rgba(255,255,255,.85); font-size:1.08rem; font-weight:500; margin-bottom:1.9rem}
+.affiche .dl-row{display:flex; flex-wrap:wrap; gap:.85rem}
+.affiche .btn-light{background:#fff; color:var(--primary); box-shadow:0 14px 30px -12px rgba(0,0,0,.5)}
+.affiche .btn-light:hover{background:#eee9dd; transform:translateY(-3px)}
 
 /* ── footer ── */
-footer{background:var(--ink); color:rgba(255,255,255,.72); padding:2.6rem 0; font-weight:500}
+footer{background:var(--forest); color:rgba(255,255,255,.72); padding:2.6rem 0; font-weight:500}
 footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.4rem; align-items:center; font-size:.9rem}
 footer .flogo{height:52px; width:auto; filter:brightness(0) invert(1); opacity:.95; margin-bottom:.5rem}
 footer .fbrand{color:#fff; font-weight:900; font-size:1.05rem}
@@ -209,10 +244,14 @@ footer .heart{color:var(--orange)}
   .burger{display:block}
   .hero-grid{grid-template-columns:1fr; justify-items:stretch}
   .hero-content{max-width:none}
-  .hero.photo::before{background:linear-gradient(to top, rgba(0,42,68,.94) 0%, rgba(0,42,68,.78) 60%, rgba(0,42,68,.6) 100%)}
+  .hero.photo::before{background:linear-gradient(to top, rgba(1,45,38,.94) 0%, rgba(1,45,38,.78) 60%, rgba(1,45,38,.6) 100%)}
   .badge-wrap{order:-1; margin-bottom:1rem}
   .intro .wrap{grid-template-columns:1fr}
   .commit .wrap{grid-template-columns:1fr}
+  .affiche .wrap{grid-template-columns:1fr; justify-items:center; text-align:center}
+  .affiche-txt{max-width:54ch}
+  .affiche-txt .kicker{justify-content:center; display:flex}
+  .affiche .dl-row{justify-content:center}
   .confetti{display:none}
   footer .wrap{flex-direction:column; text-align:center} footer .fright{text-align:center}
 }
@@ -237,6 +276,7 @@ footer .heart{color:var(--orange)}
   <symbol id="ic-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13A4 4 0 0116 11" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="ic-check" viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M20 12v6a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="ic-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-dl" viewBox="0 0 24 24"><path d="M12 3v11M7.5 9.5 12 14l4.5-4.5M5 20h14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </defs></svg>
 
 <!-- torn edge path -->
@@ -285,7 +325,7 @@ footer .heart{color:var(--orange)}
 
 <!-- ═══════ INTRO ═══════ -->
 <section class="intro band">
-  <svg class="tear tear--navy" viewBox="0 0 1200 24" preserveAspectRatio="none"><use href="#tearpath"/></svg>
+  <svg class="tear tear--primary" viewBox="0 0 1200 24" preserveAspectRatio="none"><use href="#tearpath"/></svg>
   <div class="wrap">
     <div class="num">40</div>
     <p>Quatre décennies de camps, de veillées et de belles rencontres. Le temps d'un week-end, <b>anciens, chefs, familles et Aubiérois</b> se retrouvent au parc pour fêter tout ça — et croyez-nous, <b>ça va déchirer</b>.</p>
@@ -303,13 +343,16 @@ footer .heart{color:var(--orange)}
     <div class="carousel reveal" data-carousel>
       <div class="slides" data-track>
         <figure class="slide"><img src="img/g7.jpg" alt="Les scouts font voler l'un des leurs devant la chapelle" loading="lazy"></figure>
+        <figure class="slide"><img src="img/g15.jpg" alt="Tout le groupe réuni en cercle autour du feu, au coucher du soleil" loading="lazy"></figure>
         <figure class="slide"><img src="img/g8.jpg" alt="Rassemblement du groupe au pied du Puy de Dôme" loading="lazy"></figure>
         <figure class="slide"><img src="img/g1.jpg" alt="Pont de pierre et cascade dans les gorges, en camp d'été" loading="lazy"></figure>
         <figure class="slide"><img src="img/g9.jpg" alt="Trois louvettes bras dessus bras dessous" loading="lazy"></figure>
+        <figure class="slide"><img src="img/g13.jpg" alt="Le groupe rassemblé derrière la bannière Scouts et Guides de France, avant le départ d'une course" loading="lazy"></figure>
         <figure class="slide"><img src="img/g3.jpg" alt="Froissartage : une table de camp en bois et corde" loading="lazy"></figure>
         <figure class="slide"><img src="img/g2.jpg" alt="Construction d'un radeau sur la rivière" loading="lazy"></figure>
         <figure class="slide"><img src="img/g4.jpg" alt="Grand jeu costumé et construction en forêt" loading="lazy"></figure>
         <figure class="slide"><img src="img/g6.jpg" alt="Repas de camp sous une tente de froissartage" loading="lazy"></figure>
+        <figure class="slide"><img src="img/g14.jpg" alt="Épluchage des légumes pour le repas, autour de la marmite au camp" loading="lazy"></figure>
         <figure class="slide"><img src="img/g12.jpg" alt="Deux chefs en costumes romains pour le grand jeu" loading="lazy"></figure>
         <figure class="slide"><img src="img/g5.jpg" alt="Messe célébrée au bord de la rivière" loading="lazy"></figure>
         <figure class="slide"><img src="img/g10.jpg" alt="Les tentes canadiennes du camp au crépuscule" loading="lazy"></figure>
@@ -344,7 +387,7 @@ footer .heart{color:var(--orange)}
           <h4>Grand jeu dans Aubière <span class="flag">Jeunes du groupe</span></h4>
           <p>Une aventure grandeur nature à travers la ville, réservée aux jeunes du groupe encadrés par leurs chefs.</p>
         </div>
-        <div class="stop" style="--dot:var(--navy)">
+        <div class="stop" style="--dot:var(--primary)">
           <time>Dès 14h00 · tout l'après-midi</time>
           <h4>Exposition «&nbsp;40 ans d'histoire scoute&nbsp;» au Carré des Arts</h4>
           <p>Photos, carnets de camp et objets d'époque : une rétrospective ouverte à tous pour revivre quatre décennies d'aventures.</p>
@@ -380,13 +423,32 @@ footer .heart{color:var(--orange)}
   </div>
 </section>
 
+<!-- ═══════ L'AFFICHE ═══════ -->
+<section class="affiche band on-dark">
+  <svg class="tear tear--xd" viewBox="0 0 1200 24" preserveAspectRatio="none"><use href="#tearpath"/></svg>
+  <div class="wrap">
+    <a class="affiche-frame reveal" href="poster.jpeg" target="_blank" rel="noopener" aria-label="Ouvrir l'affiche en grand dans un nouvel onglet">
+      <img src="poster.jpeg" width="1131" height="1600" alt="Affiche des 40 ans du Groupe Arverne — samedi 3 octobre 2026, parc Hubert Tarrerias à Aubière, de 13h30 à 17h30 : ateliers, jeux et exposition pour découvrir le scoutisme" loading="lazy">
+    </a>
+    <div class="affiche-txt reveal">
+      <span class="kicker">À afficher · à partager</span>
+      <h2>L'affiche de la fête<span class="hl">.</span></h2>
+      <p>Imprimez-la, glissez-la dans une vitrine de commerçant, punaisez-la au local ou partagez-la sur vos réseaux&nbsp;: <b>plus on est de fous, plus ça déchire&nbsp;!</b> Toutes les infos du samedi 3 octobre y sont.</p>
+      <div class="dl-row">
+        <a class="btn btn-light" href="poster.jpeg" download="affiche-40-ans-groupe-arverne.jpg"><svg><use href="#ic-dl"/></svg> Télécharger l'affiche</a>
+        <a class="btn btn-ghost" href="poster.jpeg" target="_blank" rel="noopener">Ouvrir en grand</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════ INFOS PRATIQUES ═══════ -->
 <section id="infos" class="infos band">
   <svg class="tear tear--xl" viewBox="0 0 1200 24" preserveAspectRatio="none"><use href="#tearpath"/></svg>
   <div class="wrap">
     <div class="sec-head reveal"><span class="kicker">Bon à savoir</span><h2>Infos pratiques</h2></div>
     <div class="cards">
-      <div class="card reveal" data-d="1" style="--ac:var(--navy)">
+      <div class="card reveal" data-d="1" style="--ac:var(--primary)">
         <div class="ic"><svg><use href="#ic-pin"/></svg></div>
         <h3>Où&nbsp;?</h3>
         <p><b>Aubière</b> — Parc Tarrerias, Carré des arts &amp; COSEC. Tout se vit à deux pas.</p>
@@ -420,21 +482,21 @@ footer .heart{color:var(--orange)}
       <h2 class="reveal" data-d="1" style="font-size:clamp(2rem,4.2vw,3.1rem);margin:.7rem 0 .6rem">Un week-end réussi, c'est plein de bonnes volontés</h2>
       <p class="reveal" data-d="2" style="color:var(--ink-soft);max-width:46ch;font-weight:500">Choisis la ou les commissions où tu veux <b>aider à organiser</b> — pas seulement participer. Sur l'appli, tu vois qui s'est déjà inscrit : rejoins tes copains&nbsp;!</p>
       <div class="atelier-list reveal" data-d="3">
-        <span class="tag" style="--dot:var(--navy)"><span class="dot"></span>Intendance</span>
+        <span class="tag" style="--dot:var(--primary)"><span class="dot"></span>Intendance</span>
         <span class="tag" style="--dot:var(--turquoise)"><span class="dot"></span>Logistique</span>
         <span class="tag" style="--dot:var(--orange)"><span class="dot"></span>Installation (samedi matin)</span>
         <span class="tag" style="--dot:var(--red)"><span class="dot"></span>Chants &amp; guitare</span>
         <span class="tag hide-sm" style="--dot:var(--green)"><span class="dot"></span>Froissartage</span>
-        <span class="tag hide-sm" style="--dot:var(--navy)"><span class="dot"></span>Nœuds</span>
+        <span class="tag hide-sm" style="--dot:var(--primary)"><span class="dot"></span>Nœuds</span>
         <span class="tag hide-sm" style="--dot:var(--turquoise)"><span class="dot"></span>Montage / démontage de tentes</span>
         <span class="tag hide-sm" style="--dot:var(--orange)"><span class="dot"></span>Cuisine sur feu / four solaire</span>
         <span class="tag hide-sm" style="--dot:var(--red)"><span class="dot"></span>Petits jeux scouts</span>
         <span class="tag hide-sm" style="--dot:var(--green)"><span class="dot"></span>Souvenir du WE (logo, pochoir)</span>
-        <span class="tag" style="--dot:var(--navy)"><span class="dot"></span>Braderie de gamelles</span>
+        <span class="tag" style="--dot:var(--primary)"><span class="dot"></span>Braderie de gamelles</span>
         <span class="tag" style="--dot:var(--turquoise)"><span class="dot"></span>Buvette</span>
         <span class="tag" style="--dot:var(--orange)"><span class="dot"></span>Nettoyage &amp; arbre à vœux</span>
         <span class="tag" style="--dot:var(--red)"><span class="dot"></span>Rangement</span>
-        <a class="tag only-sm" data-lien="comites" href="#" style="--dot:var(--navy)"><span class="dot"></span>+ d'autres sur l'appli →</a>
+        <a class="tag only-sm" data-lien="comites" href="#" style="--dot:var(--primary)"><span class="dot"></span>+ d'autres sur l'appli →</a>
       </div>
     </div>
 

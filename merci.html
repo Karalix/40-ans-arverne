@@ -13,14 +13,17 @@
 
 <style>
 :root{
-  --navy:#003a5d; --navy-d:#002c47; --navy-xd:#04283f;
-  --navy-l:#d5e1ea; --navy-xl:#eef3f7;
+  /* Couleur principale = vert de l'affiche (poster.jpeg), extrait #015F51 */
+  --primary:#015F51; --primary-d:#014C41; --primary-xd:#013A31;
+  --primary-l:#cfe6df; --primary-xl:#eaf5f1;
+  --forest:#01231d; /* vert forêt très sombre — fond du footer */
+  --marine:#003a5d; --marine-d:#002c47; /* ancien bleu marine, gardé en secondaire */
   --turquoise:#009791; --turquoise-l:#e2f2f0;
   --blue:#0069B2; --orange:#EE7F00; --red:#C22E16; --green:#006D3E; --lightgreen:#72BA80;
   --ink:#04202f; --ink-soft:#4a5b68;
   --paper:#FBFAF6; --white:#fff;
   --line:rgba(4,32,47,.12);
-  --shadow:0 22px 46px -22px rgba(0,58,93,.4);
+  --shadow:0 22px 46px -22px rgba(1,60,50,.4);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -31,30 +34,30 @@ img,svg{display:block}
 h1,h2,h3,h4{font-weight:900; letter-spacing:-.02em; line-height:1.02}
 
 /* ── kicker ── */
-.kicker{font-size:.76rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--navy); display:inline-flex; align-items:center; gap:.55em}
+.kicker{font-size:.76rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--primary); display:inline-flex; align-items:center; gap:.55em}
 .kicker::before{content:""; width:26px; height:3px; border-radius:3px; background:var(--orange)}
 
 /* ── buttons ── */
 .btn{display:inline-flex; align-items:center; gap:.55em; font-family:inherit; font-weight:800; font-size:1rem; padding:.9em 1.7em; border-radius:999px; cursor:pointer; border:2.5px solid transparent; transition:transform .2s ease, box-shadow .2s ease, background .2s, color .2s}
 .btn svg{width:1.1em;height:1.1em}
-.btn-primary{background:var(--navy); color:#fff; box-shadow:0 12px 24px -12px rgba(0,58,93,.9)}
-.btn-primary:hover{background:var(--navy-d); transform:translateY(-3px); box-shadow:0 18px 30px -12px rgba(0,58,93,.9)}
-.btn-ghost{background:transparent; color:var(--navy); border-color:var(--navy)}
-.btn-ghost:hover{background:var(--navy); color:#fff; transform:translateY(-3px)}
+.btn-primary{background:var(--primary); color:#fff; box-shadow:0 12px 24px -12px rgba(1,60,50,.9)}
+.btn-primary:hover{background:var(--primary-d); transform:translateY(-3px); box-shadow:0 18px 30px -12px rgba(1,60,50,.9)}
+.btn-ghost{background:transparent; color:var(--primary); border-color:var(--primary)}
+.btn-ghost:hover{background:var(--primary); color:#fff; transform:translateY(-3px)}
 .btn-lg{font-size:1.06rem; padding:1em 2em}
 .btn-orange{background:var(--orange); color:#fff; box-shadow:0 12px 24px -12px rgba(238,127,0,.9)}
 .btn-orange:hover{background:#d97200; transform:translateY(-3px)}
 .on-dark .btn-ghost{color:#fff; border-color:rgba(255,255,255,.65)}
-.on-dark .btn-ghost:hover{background:#fff; color:var(--navy); border-color:#fff}
+.on-dark .btn-ghost:hover{background:#fff; color:var(--primary); border-color:#fff}
 .on-dark .kicker{color:#fff}
 .on-dark .kicker::before{background:var(--turquoise)}
 
 /* ── torn-paper edge ── */
 .band{position:relative}
 .tear{position:absolute; left:0; top:0; width:100%; height:22px; transform:translateY(-21px); z-index:2; pointer-events:none}
-.tear--navy{fill:var(--navy)}
-.tear--xl{fill:var(--navy-xl)}
-.tear--xd{fill:var(--navy-xd)}
+.tear--primary{fill:var(--primary)}
+.tear--xl{fill:var(--primary-xl)}
+.tear--xd{fill:var(--primary-xd)}
 .tear--paper{fill:var(--paper)}
 
 /* ── header ── */
@@ -63,16 +66,16 @@ header{position:sticky; top:0; z-index:100; background:rgba(251,250,246,.9); bac
 .brand{display:flex; align-items:center; gap:.8rem; min-width:0}
 .brand .logo-slot{height:40px; width:auto; flex:none}
 .brand-txt{font-weight:900; font-size:1.02rem; line-height:1.05; padding-left:.8rem; border-left:2px solid var(--line)}
-.brand-txt small{display:block; font-weight:700; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:var(--navy); margin-top:1px}
+.brand-txt small{display:block; font-weight:700; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:var(--primary); margin-top:1px}
 .nav-links{display:flex; align-items:center; gap:1.7rem}
 .nav-links a{font-weight:700; font-size:.94rem; color:var(--ink-soft); transition:color .2s}
-.nav-links a:hover{color:var(--navy)}
+.nav-links a:hover{color:var(--primary)}
 .nav-cta{display:flex; align-items:center; gap:.8rem}
 .burger{display:none; background:none; border:none; cursor:pointer; padding:.4rem}
 .burger span{display:block; width:24px; height:2.5px; border-radius:3px; background:var(--ink); margin:5px 0; transition:.3s}
 
 /* ── merci hero ── */
-.merci-hero{position:relative; overflow:hidden; padding:clamp(2.5rem,5vw,4.5rem) 0 clamp(3rem,6vw,5rem); min-height:min(680px,85vh); display:flex; align-items:center; background:var(--navy-xd)}
+.merci-hero{position:relative; overflow:hidden; padding:clamp(2.5rem,5vw,4.5rem) 0 clamp(3rem,6vw,5rem); min-height:min(680px,85vh); display:flex; align-items:center; background:var(--primary-xd)}
 .merci-hero::before{content:""; position:absolute; inset:0; z-index:1; background:radial-gradient(ellipse 70% 70% at 30% 20%, rgba(0,151,145,.18) 0%, transparent 65%), radial-gradient(ellipse 60% 60% at 75% 70%, rgba(238,127,0,.12) 0%, transparent 65%)}
 .merci-content{position:relative; z-index:2; text-align:center; max-width:680px; margin:0 auto}
 .merci-hero .check-badge{display:inline-flex; width:88px; height:88px; border-radius:50%; background:var(--turquoise); color:#fff; align-items:center; justify-content:center; margin-bottom:1.6rem; box-shadow:0 18px 40px -12px rgba(0,151,145,.55)}
@@ -83,9 +86,9 @@ header{position:sticky; top:0; z-index:100; background:rgba(251,250,246,.9); bac
 .merci-hero .cta-row{display:flex; flex-wrap:wrap; gap:.85rem; justify-content:center; margin-top:2rem}
 
 /* ── commission panel (dark, prominent) ── */
-.commit-cta{background:var(--navy-xl)}
+.commit-cta{background:var(--primary-xl)}
 .commit-cta .wrap{display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4rem); align-items:center}
-.commit-box{background:var(--navy-xd); color:#fff; border-radius:24px; padding:clamp(1.9rem,3vw,2.7rem); box-shadow:var(--shadow); position:relative; overflow:hidden}
+.commit-box{background:var(--primary-xd); color:#fff; border-radius:24px; padding:clamp(1.9rem,3vw,2.7rem); box-shadow:var(--shadow); position:relative; overflow:hidden}
 .commit-box h3{font-size:clamp(1.5rem,2.6vw,2rem); margin-bottom:.7rem; line-height:1.1}
 .commit-box p{color:rgba(255,255,255,.82); margin-bottom:1.5rem; font-weight:500}
 .commit-box .hint{font-size:.82rem; font-weight:700; color:#6bc5c0; margin-top:1.1rem; display:flex; align-items:center; gap:.5em}
@@ -93,8 +96,8 @@ header{position:sticky; top:0; z-index:100; background:rgba(251,250,246,.9); bac
 
 .atelier-list{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.5rem}
 .tag{background:#fff; border:1.5px solid var(--line); border-radius:999px; padding:.5em 1em; font-size:.9rem; font-weight:700; display:inline-flex; align-items:center; gap:.5em; transition:transform .18s ease, background .18s, color .18s, border-color .18s}
-.tag:hover{transform:translateY(-3px) rotate(-1.5deg); background:var(--dot,var(--navy)); color:#fff; border-color:var(--dot,var(--navy))}
-.tag .dot{width:8px;height:8px;border-radius:50%;background:var(--dot,var(--navy))}
+.tag:hover{transform:translateY(-3px) rotate(-1.5deg); background:var(--dot,var(--primary)); color:#fff; border-color:var(--dot,var(--primary))}
+.tag .dot{width:8px;height:8px;border-radius:50%;background:var(--dot,var(--primary))}
 .tag:hover .dot{background:#fff}
 .tag.only-sm{display:none}
 
@@ -102,7 +105,7 @@ header{position:sticky; top:0; z-index:100; background:rgba(251,250,246,.9); bac
 .inlink:hover{text-decoration-color:currentColor}
 
 /* ── footer ── */
-footer{background:var(--ink); color:rgba(255,255,255,.72); padding:2.6rem 0; font-weight:500}
+footer{background:var(--forest); color:rgba(255,255,255,.72); padding:2.6rem 0; font-weight:500}
 footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.4rem; align-items:center; font-size:.9rem}
 footer .flogo{height:52px; width:auto; filter:brightness(0) invert(1); opacity:.95; margin-bottom:.5rem}
 footer .fbrand{color:#fff; font-weight:900; font-size:1.05rem}
@@ -200,21 +203,21 @@ footer .heart{color:var(--orange)}
       <h2 class="reveal" data-d="1" style="font-size:clamp(2rem,4.2vw,3.1rem);margin:.7rem 0 .6rem">Un week-end réussi, c'est plein de bonnes volontés</h2>
       <p class="reveal" data-d="2" style="color:var(--ink-soft);max-width:46ch;font-weight:500;margin-bottom:1rem">Maintenant que tu es inscrit·e, passe à l'étape d'après : choisis la ou les commissions où tu veux <b>aider à organiser</b>. Sur Comeety, tu vois qui s'est déjà inscrit et tu rejoins tes copains&nbsp;!</p>
       <div class="atelier-list reveal" data-d="3">
-        <span class="tag" style="--dot:var(--navy)"><span class="dot"></span>Intendance</span>
+        <span class="tag" style="--dot:var(--primary)"><span class="dot"></span>Intendance</span>
         <span class="tag" style="--dot:var(--turquoise)"><span class="dot"></span>Logistique</span>
         <span class="tag" style="--dot:var(--orange)"><span class="dot"></span>Installation (samedi matin)</span>
         <span class="tag" style="--dot:var(--red)"><span class="dot"></span>Chants &amp; guitare</span>
         <span class="tag hide-sm" style="--dot:var(--green)"><span class="dot"></span>Froissartage</span>
-        <span class="tag hide-sm" style="--dot:var(--navy)"><span class="dot"></span>Nœuds</span>
+        <span class="tag hide-sm" style="--dot:var(--primary)"><span class="dot"></span>Nœuds</span>
         <span class="tag hide-sm" style="--dot:var(--turquoise)"><span class="dot"></span>Montage / démontage de tentes</span>
         <span class="tag hide-sm" style="--dot:var(--orange)"><span class="dot"></span>Cuisine sur feu / four solaire</span>
         <span class="tag hide-sm" style="--dot:var(--red)"><span class="dot"></span>Petits jeux scouts</span>
         <span class="tag hide-sm" style="--dot:var(--green)"><span class="dot"></span>Souvenir du WE (logo, pochoir)</span>
-        <span class="tag" style="--dot:var(--navy)"><span class="dot"></span>Braderie de gamelles</span>
+        <span class="tag" style="--dot:var(--primary)"><span class="dot"></span>Braderie de gamelles</span>
         <span class="tag" style="--dot:var(--turquoise)"><span class="dot"></span>Buvette</span>
         <span class="tag" style="--dot:var(--orange)"><span class="dot"></span>Nettoyage &amp; arbre à vœux</span>
         <span class="tag" style="--dot:var(--red)"><span class="dot"></span>Rangement</span>
-        <a class="tag only-sm" href="https://comeety.krlx.fr/e/bmuemtu" target="_blank" rel="noopener" style="--dot:var(--navy)"><span class="dot"></span>+ d'autres sur l'appli →</a>
+        <a class="tag only-sm" href="https://comeety.krlx.fr/e/bmuemtu" target="_blank" rel="noopener" style="--dot:var(--primary)"><span class="dot"></span>+ d'autres sur l'appli →</a>
       </div>
     </div>
 
